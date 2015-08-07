@@ -1,0 +1,11 @@
+#lang scheme
+
+(define (string-to-tree string)
+  (define (to-tree l)
+    (cond
+      ((null?  l) '())
+      ((char-alphabetic? (car l)) (cons (car l) (to-tree (cdr l)))))
+      ((char=? #\( (car l))) (cons  (list (car l) (to-tree (cdr l))) '())))
+      ;((char=? #\) (car l)) (cons '() (cons (car l) (to-tree (cdr l))))))
+    (to-tree (string->list string)))
+(string-to-tree "")

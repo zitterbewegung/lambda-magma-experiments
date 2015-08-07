@@ -1,0 +1,7 @@
+#lang racket
+(match '((a b) ( c))
+    [(list (list  x y ...) z ...) (list x y x z)])
+(define (lambda-matcher x)
+  (match* x
+    [(list (list  x y ...) z ...) (list (list x y) (list x z))]))
+(lambda-matcher (lambda-matcher '((a b) ( c))))

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document version="1.0">
+    <GraphTransformationSystem ID="I0" directed="true" name="GraGra" parallel="true">
+        <TaggedValue Tag="AttrHandler" TagValue="Java Expr">
+            <TaggedValue Tag="Package" TagValue="java.lang"/>
+            <TaggedValue Tag="Package" TagValue="java.util"/>
+        </TaggedValue>
+        <TaggedValue Tag="CSP" TagValue="true"/>
+        <TaggedValue Tag="injective" TagValue="true"/>
+        <TaggedValue Tag="dangling" TagValue="true"/>
+        <TaggedValue Tag="identification" TagValue="true"/>
+        <TaggedValue Tag="NACs" TagValue="true"/>
+        <TaggedValue Tag="PACs" TagValue="true"/>
+        <TaggedValue Tag="GACs" TagValue="true"/>
+        <TaggedValue Tag="priority" TagValue="true"/>
+        <TaggedValue Tag="breakAllLayer" TagValue="true"/>
+        <TaggedValue Tag="showGraphAfterStep" TagValue="true"/>
+        <TaggedValue Tag="TypeGraphLevel" TagValue="DISABLED"/>
+        <Types>
+            <NodeType ID="I1" abstract="false" name="element%:RECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
+                <AttrType ID="I3" attrname="Name" typename="String" visible="true"/>
+            </NodeType>
+            <EdgeType ID="I4" abstract="false" name="default%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+        </Types>
+        <Graph ID="I5" kind="HOST" name="Graph">
+            <Node ID="I6" type="I1"/>
+            <Node ID="I8" type="I1"/>
+            <Edge ID="I10" source="I6" target="I8" type="I4"/>
+        </Graph>
+        <Graph ID="I11" kind="HOST" name="DistributeTest1">
+            <Node ID="I12" type="I1"/>
+            <Node ID="I14" type="I1"/>
+            <Node ID="I16" type="I1"/>
+            <Node ID="I18" type="I1"/>
+            <Node ID="I20" type="I1"/>
+            <Node ID="I22" type="I1"/>
+            <Node ID="I24" type="I1"/>
+            <Edge ID="I26" source="I12" target="I14" type="I4"/>
+            <Edge ID="I27" source="I12" target="I16" type="I4"/>
+            <Edge ID="I28" source="I14" target="I18" type="I4"/>
+            <Edge ID="I29" source="I14" target="I20" type="I4"/>
+            <Edge ID="I30" source="I16" target="I22" type="I4"/>
+            <Edge ID="I31" source="I16" target="I24" type="I4"/>
+        </Graph>
+        <Rule ID="I32" formula="true" name="Rule">
+            <Graph ID="I34" kind="LHS" name="LeftOf_Rule">
+                <Node ID="I35" type="I1"/>
+                <Node ID="I37" type="I1"/>
+                <Node ID="I39" type="I1"/>
+                <Node ID="I41" type="I1"/>
+                <Node ID="I43" type="I1"/>
+                <Edge ID="I45" source="I35" target="I37" type="I4"/>
+                <Edge ID="I46" source="I35" target="I39" type="I4"/>
+                <Edge ID="I47" source="I39" target="I41" type="I4"/>
+                <Edge ID="I48" source="I39" target="I43" type="I4"/>
+            </Graph>
+            <Graph ID="I49" kind="RHS" name="RightOf_Rule">
+                <Node ID="I50" type="I1"/>
+                <Node ID="I52" type="I1"/>
+                <Node ID="I54" type="I1"/>
+                <Node ID="I56" type="I1"/>
+                <Node ID="I58" type="I1"/>
+                <Node ID="I60" type="I1"/>
+                <Node ID="I62" type="I1"/>
+                <Edge ID="I64" source="I50" target="I52" type="I4"/>
+                <Edge ID="I65" source="I50" target="I54" type="I4"/>
+                <Edge ID="I66" source="I52" target="I56" type="I4"/>
+                <Edge ID="I67" source="I52" target="I58" type="I4"/>
+                <Edge ID="I68" source="I54" target="I60" type="I4"/>
+                <Edge ID="I69" source="I54" target="I62" type="I4"/>
+            </Graph>
+            <Morphism comment="Formula: true" name="Rule"/>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I70" formula="true" name="Rule1">
+            <Parameter PTYPE="inout" expr="Name.equals(Name)"
+                name="result" type="boolean"/>
+            <Parameter PTYPE="inout" name="Name" type="String" value="a"/>
+            <Graph ID="I72" kind="LHS" name="LeftOf_Rule1">
+                <Node ID="I73" type="I1">
+                    <Attribute constant="true" type="I3">
+                        <Value>
+                            <string>a</string>
+                        </Value>
+                    </Attribute>
+                </Node>
+                <Node ID="I76" type="I1">
+                    <Attribute constant="true" type="I3">
+                        <Value>
+                            <string>a</string>
+                        </Value>
+                    </Attribute>
+                </Node>
+                <Edge ID="I79" source="I73" target="I76" type="I4"/>
+            </Graph>
+            <Graph ID="I80" kind="RHS" name="RightOf_Rule1">
+                <Node ID="I81" type="I1">
+                    <Attribute constant="true" type="I3">
+                        <Value>
+                            <string>a</string>
+                        </Value>
+                    </Attribute>
+                </Node>
+            </Graph>
+            <Morphism comment="Formula: true" name="Rule1"/>
+            <ApplCondition>
+                <AttrCondition>
+                    <Condition enabled="false">
+                        <Value>
+                            <string>Name.equals(Name)</string>
+                        </Value>
+                    </Condition>
+                </AttrCondition>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="1"/>
+        </Rule>
+    </GraphTransformationSystem>
+</Document>

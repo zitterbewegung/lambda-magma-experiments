@@ -1,0 +1,5 @@
+#lang racket
+(match '((a b) ( c))
+    [(list (list  x ...) ...) x])
+
+(define)

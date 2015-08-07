@@ -1,0 +1,25 @@
+In[14]:= ap=ArcPresentation["K11n11"]
+During evaluation of In[14]:= KnotTheory::loading: Loading precomputed data in DTCode4KnotsTo11`.
+During evaluation of In[14]:= KnotTheory::credits: The GaussCode to PD conversion was written by Siddarth Sankaran at the University of Toronto in the summer of 2005.
+Out[14]= ArcPresentation[{12,2},{1,10},{3,9},{5,11},{9,12},{4,8},{2,5},{11,7},{8,6},{7,4},{10,3},{6,1}]
+In[15]:= Draw[ap]
+Out[15]= \!\(\*
+GraphicsBox[{
+{Thickness[NCache[Rational[1, 120], 0.008333333333333333]], LineBox[{{12, 1}, {2, 1}}], LineBox[{{1, 2}, {10, 2}}], LineBox[{{3, 3}, {9, 3}}], LineBox[{{5, 4}, {11, 4}}], LineBox[{{9, 5}, {12, 5}}], LineBox[{{4, 6}, {8, 6}}], LineBox[{{2, 7}, {5, 7}}], LineBox[{{11, 8}, {7, 8}}], LineBox[{{8, 9}, {6, 9}}], LineBox[{{7, 10}, {4, 10}}], LineBox[{{10, 11}, {3, 11}}], LineBox[{{6, 12}, {1, 12}}]}, 
+{GrayLevel[1], Thickness[0.0375], LineBox[{{1, 2.5}, {1, 11.5}}], LineBox[{{2, 1.5}, {2, 6.5}}], LineBox[{{3, 3.5}, {3, 10.5}}], LineBox[{{4, 6.5}, {4, 9.5}}], LineBox[{{5, 4.5}, {5, 6.5}}], LineBox[{{6, 9.5}, {6, 11.5}}], LineBox[{{7, 8.5}, {7, 9.5}}], LineBox[{{8, 6.5}, {8, 8.5}}], LineBox[{{9, 3.5}, {9, 4.5}}], LineBox[{{10, 2.5}, {10, 10.5}}], LineBox[{{11, 4.5}, {11, 7.5}}], LineBox[{{12, 1.5}, {12, 4.5}}]}, 
+{GrayLevel[0], Thickness[NCache[Rational[1, 120], 0.008333333333333333]], LineBox[{{1, 2}, {1, 12}}], LineBox[{{2, 7}, {2, 1}}], LineBox[{{3, 3}, {3, 11}}], LineBox[{{4, 6}, {4, 10}}], LineBox[{{5, 4}, {5, 7}}], LineBox[{{6, 12}, {6, 9}}], LineBox[{{7, 10}, {7, 8}}], LineBox[{{8, 9}, {8, 6}}], LineBox[{{9, 5}, {9, 3}}], LineBox[{{10, 11}, {10, 2}}], LineBox[{{11, 8}, {11, 4}}], LineBox[{{12, 1}, {12, 5}}]}}]\)
+In[16]:= Reflect[ap_ArcPresentation]:=ArcPresentation@@((Last/@Sort[Reverse/@Position[ap,#]])&/@Range[Length[ap]])
+In[18]:= Reflect[AllKnots[0,1]] // Draw
+Out[18]= Draw[Reflect[AllKnots[0,1]]]
+In[21]:= ArcPresentation /@ AllKnots[0,1]
+During evaluation of In[21]:= Part::partd: Part specification PD[0][[1,1]] is longer than depth of object. >>
+During evaluation of In[21]:= Part::partd: Part specification PD[0][[1,3]] is longer than depth of object. >>
+During evaluation of In[21]:= Part::partd: Part specification PD[0][[1,2]] is longer than depth of object. >>
+During evaluation of In[21]:= General::stop: Further output of Part::partd will be suppressed during this calculation. >>
+During evaluation of In[21]:= Part::partw: Part 3 of Knot[MorseLink::Error: bad input] does not exist. >>
+During evaluation of In[21]:= Part::partw: Part 2 of Knot[MorseLink::Error: bad input] does not exist. >>
+During evaluation of In[21]:= Part::partw: Part 4 of Knot[MorseLink::Error: bad input] does not exist. >>
+During evaluation of In[21]:= General::stop: Further output of Part::partw will be suppressed during this calculation. >>
+During evaluation of In[21]:= $IterationLimit::itlim: Iteration limit of 4096 exceeded. >>
+During evaluation of In[21]:= $IterationLimit::itlim: Iteration limit of 4096 exceeded. >>
+Out[21]= AllKnots[Hold[ArcPresentation[MorseLink[MorseLink::Error: bad input]]],Hold[ArcPresentation[MorseLink[MorseLink::Error: bad input]]]]

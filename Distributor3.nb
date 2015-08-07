@@ -1,0 +1,2696 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     99837,       2687]
+NotebookOptionsPosition[     97783,       2623]
+NotebookOutlinePosition[     98127,       2638]
+CellTagsIndexPosition[     98084,       2635]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"rule1", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"X", "[", 
+         RowBox[{"a_", "**", " ", "b_"}], "]"}], "**", " ", 
+        RowBox[{"X", "[", "c_", " ", "]"}]}], "\[RuleDelayed]", " ", 
+       RowBox[{"X", "[", 
+        RowBox[{
+         RowBox[{"X", "[", 
+          RowBox[{"a", " ", "**", 
+           RowBox[{"X", "[", "c", "]"}]}], "]"}], "**", 
+         RowBox[{"X", "[", 
+          RowBox[{"b", " ", "**", 
+           RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"rule2", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"X", "[", "a_", "]"}], " ", "\[RuleDelayed]", " ", 
+       RowBox[{"{", "a", "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Dosh", "[", "t_", "]"}], ":=", " ", 
+    RowBox[{"Simplify", "[", 
+     RowBox[{
+      RowBox[{"(", "t", ")"}], "/.", "rule1"}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Simp", "[", "t_", "]"}], ":=", " ", 
+    RowBox[{"Simplify", "[", 
+     RowBox[{
+      RowBox[{"(", "t", ")"}], "//.", "rule2"}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Flog", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{"x", " ", "**", " ", "y"}], "]"}], " ", "**", " ", 
+     RowBox[{"X", "[", "z", "]"}]}]}], "\[IndentingNewLine]", 
+   RowBox[{"Dosh", "[", "Flog", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Dosh", "[", 
+    RowBox[{"Dosh", "[", "Flog", "]"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Dosh", "[", 
+    RowBox[{"Dosh", "[", 
+     RowBox[{"Dosh", "[", "Flog", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+   
+   RowBox[{"Dosh", "[", 
+    RowBox[{"Dosh", "[", 
+     RowBox[{"Dosh", "[", 
+      RowBox[{"Dosh", "[", "Flog", "]"}], "]"}], "]"}], "]"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.556640100279808*^9, 3.556640181865127*^9}, 
+   3.5566402283567543`*^9, {3.556640439949977*^9, 3.5566405747536182`*^9}, {
+   3.556640707079842*^9, 3.556640739734056*^9}, {3.556651924615226*^9, 
+   3.556651935716778*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"X", "[", 
+   RowBox[{"x", "**", "y"}], "]"}], "**", 
+  RowBox[{"X", "[", "z", "]"}]}]], "Output",
+ CellChangeTimes->{3.5566407429607077`*^9, 3.556651939145649*^9, 
+  3.556715734556798*^9, 3.556715960209651*^9, 3.556716023254212*^9, 
+  3.557251247672305*^9}],
+
+Cell[BoxData[
+ RowBox[{"X", "[", 
+  RowBox[{
+   RowBox[{"X", "[", 
+    RowBox[{"x", "**", 
+     RowBox[{"X", "[", "z", "]"}]}], "]"}], "**", 
+   RowBox[{"X", "[", 
+    RowBox[{"y", "**", 
+     RowBox[{"X", "[", "z", "]"}]}], "]"}]}], "]"}]], "Output",
+ CellChangeTimes->{3.5566407429607077`*^9, 3.556651939145649*^9, 
+  3.556715734556798*^9, 3.556715960209651*^9, 3.556716023254212*^9, 
+  3.557251247789199*^9}],
+
+Cell[BoxData[
+ RowBox[{"X", "[", 
+  RowBox[{"X", "[", 
+   RowBox[{
+    RowBox[{"X", "[", 
+     RowBox[{"x", "**", 
+      RowBox[{"X", "[", 
+       RowBox[{"y", "**", 
+        RowBox[{"X", "[", "z", "]"}]}], "]"}]}], "]"}], "**", 
+    RowBox[{"X", "[", 
+     RowBox[{
+      RowBox[{"X", "[", "z", "]"}], "**", 
+      RowBox[{"X", "[", 
+       RowBox[{"y", "**", 
+        RowBox[{"X", "[", "z", "]"}]}], "]"}]}], "]"}]}], "]"}], 
+  "]"}]], "Output",
+ CellChangeTimes->{3.5566407429607077`*^9, 3.556651939145649*^9, 
+  3.556715734556798*^9, 3.556715960209651*^9, 3.556716023254212*^9, 
+  3.5572512478811274`*^9}],
+
+Cell[BoxData[
+ RowBox[{"X", "[", 
+  RowBox[{"X", "[", 
+   RowBox[{"X", "[", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{"x", "**", 
+       RowBox[{"X", "[", 
+        RowBox[{
+         RowBox[{"X", "[", "z", "]"}], "**", 
+         RowBox[{"X", "[", 
+          RowBox[{"y", "**", 
+           RowBox[{"X", "[", "z", "]"}]}], "]"}]}], "]"}]}], "]"}], "**", 
+     RowBox[{"X", "[", 
+      RowBox[{
+       RowBox[{"X", "[", 
+        RowBox[{"y", "**", 
+         RowBox[{"X", "[", "z", "]"}]}], "]"}], "**", 
+       RowBox[{"X", "[", 
+        RowBox[{
+         RowBox[{"X", "[", "z", "]"}], "**", 
+         RowBox[{"X", "[", 
+          RowBox[{"y", "**", 
+           RowBox[{"X", "[", "z", "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}], 
+   "]"}], "]"}]], "Output",
+ CellChangeTimes->{3.5566407429607077`*^9, 3.556651939145649*^9, 
+  3.556715734556798*^9, 3.556715960209651*^9, 3.556716023254212*^9, 
+  3.5572512478911867`*^9}],
+
+Cell[BoxData[
+ RowBox[{"X", "[", 
+  RowBox[{"X", "[", 
+   RowBox[{"X", "[", 
+    RowBox[{"X", "[", 
+     RowBox[{
+      RowBox[{"X", "[", 
+       RowBox[{"x", "**", 
+        RowBox[{"X", "[", 
+         RowBox[{
+          RowBox[{"X", "[", 
+           RowBox[{"y", "**", 
+            RowBox[{"X", "[", "z", "]"}]}], "]"}], "**", 
+          RowBox[{"X", "[", 
+           RowBox[{
+            RowBox[{"X", "[", "z", "]"}], "**", 
+            RowBox[{"X", "[", 
+             RowBox[{"y", "**", 
+              RowBox[{"X", "[", "z", "]"}]}], "]"}]}], "]"}]}], "]"}]}], 
+       "]"}], "**", 
+      RowBox[{"X", "[", 
+       RowBox[{
+        RowBox[{"X", "[", 
+         RowBox[{
+          RowBox[{"X", "[", "z", "]"}], "**", 
+          RowBox[{"X", "[", 
+           RowBox[{"y", "**", 
+            RowBox[{"X", "[", "z", "]"}]}], "]"}]}], "]"}], "**", 
+        RowBox[{"X", "[", 
+         RowBox[{
+          RowBox[{"X", "[", 
+           RowBox[{"y", "**", 
+            RowBox[{"X", "[", "z", "]"}]}], "]"}], "**", 
+          RowBox[{"X", "[", 
+           RowBox[{
+            RowBox[{"X", "[", "z", "]"}], "**", 
+            RowBox[{"X", "[", 
+             RowBox[{"y", "**", 
+              RowBox[{"X", "[", "z", "]"}]}], "]"}]}], "]"}]}], "]"}]}], 
+       "]"}]}], "]"}], "]"}], "]"}], "]"}]], "Output",
+ CellChangeTimes->{3.5566407429607077`*^9, 3.556651939145649*^9, 
+  3.556715734556798*^9, 3.556715960209651*^9, 3.556716023254212*^9, 
+  3.557251247900766*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Simp", "[", "Flog", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Simp", "[", 
+  RowBox[{"Dosh", "[", "Flog", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Simp", "[", 
+  RowBox[{"Dosh", "[", 
+   RowBox[{"Dosh", "[", "Flog", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Simp", "[", 
+  RowBox[{"Dosh", "[", 
+   RowBox[{"Dosh", "[", 
+    RowBox[{"Dosh", "[", "Flog", "]"}], "]"}], "]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Simp", "[", 
+  RowBox[{"Dosh", "[", 
+   RowBox[{"Dosh", "[", 
+    RowBox[{"Dosh", "[", 
+     RowBox[{"Dosh", "[", "Flog", "]"}], "]"}], "]"}], "]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Simp", "[", 
+   RowBox[{"Dosh", "[", 
+    RowBox[{"Dosh", "[", 
+     RowBox[{"Dosh", "[", 
+      RowBox[{"Dosh", "[", 
+       RowBox[{"Dosh", "[", "Flog", "]"}], "]"}], "]"}], "]"}], "]"}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{
+  3.556640087870014*^9, {3.556640597212277*^9, 3.55664062869974*^9}, {
+   3.556640788492613*^9, 3.556640841565015*^9}, {3.5566519466140623`*^9, 
+   3.556651953799451*^9}, {3.556652028321083*^9, 3.556652051060452*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{"x", "**", "y"}], "}"}], "**", 
+  RowBox[{"{", "z", "}"}]}]], "Output",
+ CellChangeTimes->{3.556640630095747*^9, 3.5566407021112137`*^9, 
+  3.556640750980805*^9, 3.556640843542193*^9, 3.556651956732757*^9, 
+  3.55665205254839*^9, 3.556715734973157*^9, 3.556715960636434*^9, 
+  3.556716028379765*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "**", 
+     RowBox[{"{", "z", "}"}]}], "}"}], "**", 
+   RowBox[{"{", 
+    RowBox[{"y", "**", 
+     RowBox[{"{", "z", "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.556640630095747*^9, 3.5566407021112137`*^9, 
+  3.556640750980805*^9, 3.556640843542193*^9, 3.556651956732757*^9, 
+  3.55665205254839*^9, 3.556715734973157*^9, 3.556715960636434*^9, 
+  3.556716028386938*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", "**", 
+      RowBox[{"{", 
+       RowBox[{"y", "**", 
+        RowBox[{"{", "z", "}"}]}], "}"}]}], "}"}], "**", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "z", "}"}], "**", 
+      RowBox[{"{", 
+       RowBox[{"y", "**", 
+        RowBox[{"{", "z", "}"}]}], "}"}]}], "}"}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.556640630095747*^9, 3.5566407021112137`*^9, 
+  3.556640750980805*^9, 3.556640843542193*^9, 3.556651956732757*^9, 
+  3.55665205254839*^9, 3.556715734973157*^9, 3.556715960636434*^9, 
+  3.556716028395801*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x", "**", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", "z", "}"}], "**", 
+         RowBox[{"{", 
+          RowBox[{"y", "**", 
+           RowBox[{"{", "z", "}"}]}], "}"}]}], "}"}]}], "}"}], "**", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"y", "**", 
+         RowBox[{"{", "z", "}"}]}], "}"}], "**", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", "z", "}"}], "**", 
+         RowBox[{"{", 
+          RowBox[{"y", "**", 
+           RowBox[{"{", "z", "}"}]}], "}"}]}], "}"}]}], "}"}]}], "}"}], "}"}],
+   "}"}]], "Output",
+ CellChangeTimes->{3.556640630095747*^9, 3.5566407021112137`*^9, 
+  3.556640750980805*^9, 3.556640843542193*^9, 3.556651956732757*^9, 
+  3.55665205254839*^9, 3.556715734973157*^9, 3.556715960636434*^9, 
+  3.5567160284610567`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", "**", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"y", "**", 
+            RowBox[{"{", "z", "}"}]}], "}"}], "**", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", "z", "}"}], "**", 
+            RowBox[{"{", 
+             RowBox[{"y", "**", 
+              RowBox[{"{", "z", "}"}]}], "}"}]}], "}"}]}], "}"}]}], "}"}], "**", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", "z", "}"}], "**", 
+          RowBox[{"{", 
+           RowBox[{"y", "**", 
+            RowBox[{"{", "z", "}"}]}], "}"}]}], "}"}], "**", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"y", "**", 
+            RowBox[{"{", "z", "}"}]}], "}"}], "**", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", "z", "}"}], "**", 
+            RowBox[{"{", 
+             RowBox[{"y", "**", 
+              RowBox[{"{", "z", "}"}]}], "}"}]}], "}"}]}], "}"}]}], "}"}]}], 
+     "}"}], "}"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.556640630095747*^9, 3.5566407021112137`*^9, 
+  3.556640750980805*^9, 3.556640843542193*^9, 3.556651956732757*^9, 
+  3.55665205254839*^9, 3.556715734973157*^9, 3.556715960636434*^9, 
+  3.556716028525634*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x", "**", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "z", "}"}], "**", 
+             RowBox[{"{", 
+              RowBox[{"y", "**", 
+               RowBox[{"{", "z", "}"}]}], "}"}]}], "}"}], "**", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"y", "**", 
+               RowBox[{"{", "z", "}"}]}], "}"}], "**", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", "z", "}"}], "**", 
+               RowBox[{"{", 
+                RowBox[{"y", "**", 
+                 RowBox[{"{", "z", "}"}]}], "}"}]}], "}"}]}], "}"}]}], 
+          "}"}]}], "}"}], "**", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"y", "**", 
+             RowBox[{"{", "z", "}"}]}], "}"}], "**", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "z", "}"}], "**", 
+             RowBox[{"{", 
+              RowBox[{"y", "**", 
+               RowBox[{"{", "z", "}"}]}], "}"}]}], "}"}]}], "}"}], "**", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "z", "}"}], "**", 
+             RowBox[{"{", 
+              RowBox[{"y", "**", 
+               RowBox[{"{", "z", "}"}]}], "}"}]}], "}"}], "**", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"y", "**", 
+               RowBox[{"{", "z", "}"}]}], "}"}], "**", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", "z", "}"}], "**", 
+               RowBox[{"{", 
+                RowBox[{"y", "**", 
+                 RowBox[{"{", "z", "}"}]}], "}"}]}], "}"}]}], "}"}]}], 
+          "}"}]}], "}"}]}], "}"}], "}"}], "}"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.556640630095747*^9, 3.5566407021112137`*^9, 
+  3.556640750980805*^9, 3.556640843542193*^9, 3.556651956732757*^9, 
+  3.55665205254839*^9, 3.556715734973157*^9, 3.556715960636434*^9, 
+  3.5567160285877666`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Boot", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{
+       RowBox[{"X", "[", 
+        RowBox[{"a", "**", "b"}], "]"}], "**", "c"}], "]"}], "**", 
+     RowBox[{"X", "[", "d", "]"}]}]}], "\[IndentingNewLine]", 
+   RowBox[{"Simp", "[", 
+    RowBox[{"Dosh", "[", "Boot", "]"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Simp", "[", 
+    RowBox[{"Dosh", "[", 
+     RowBox[{"Dosh", "[", "Boot", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+   
+   RowBox[{"Simp", "[", 
+    RowBox[{"Dosh", "[", 
+     RowBox[{"Dosh", "[", 
+      RowBox[{"Dosh", "[", "Boot", "]"}], "]"}], "]"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.5521942072525187`*^9, 3.552194254816513*^9}, {
+  3.556715914389011*^9, 3.556715920141005*^9}, {3.5567160429120817`*^9, 
+  3.556716086258603*^9}, {3.5567161173609*^9, 3.55671612608335*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"X", "[", 
+   RowBox[{
+    RowBox[{"X", "[", 
+     RowBox[{"a", "**", "b"}], "]"}], "**", "c"}], "]"}], "**", 
+  RowBox[{"X", "[", "d", "]"}]}]], "Output",
+ CellChangeTimes->{
+  3.552194256757093*^9, 3.556715735627439*^9, 3.556715961270137*^9, {
+   3.556716062183473*^9, 3.5567160908551283`*^9}, 3.556716127869301*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", "**", "b"}], "}"}], "**", 
+     RowBox[{"{", "d", "}"}]}], "}"}], "**", 
+   RowBox[{"{", 
+    RowBox[{"c", "**", 
+     RowBox[{"{", "d", "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.552194256757093*^9, 3.556715735627439*^9, 3.556715961270137*^9, {
+   3.556716062183473*^9, 3.5567160908551283`*^9}, 3.556716127880735*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"a", "**", "b"}], "}"}], "**", 
+      RowBox[{"{", 
+       RowBox[{"c", "**", 
+        RowBox[{"{", "d", "}"}]}], "}"}]}], "}"}], "**", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "d", "}"}], "**", 
+      RowBox[{"{", 
+       RowBox[{"c", "**", 
+        RowBox[{"{", "d", "}"}]}], "}"}]}], "}"}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.552194256757093*^9, 3.556715735627439*^9, 3.556715961270137*^9, {
+   3.556716062183473*^9, 3.5567160908551283`*^9}, 3.5567161278879538`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", "**", "b"}], "}"}], "**", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", "d", "}"}], "**", 
+         RowBox[{"{", 
+          RowBox[{"c", "**", 
+           RowBox[{"{", "d", "}"}]}], "}"}]}], "}"}]}], "}"}], "**", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"c", "**", 
+         RowBox[{"{", "d", "}"}]}], "}"}], "**", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", "d", "}"}], "**", 
+         RowBox[{"{", 
+          RowBox[{"c", "**", 
+           RowBox[{"{", "d", "}"}]}], "}"}]}], "}"}]}], "}"}]}], "}"}], "}"}],
+   "}"}]], "Output",
+ CellChangeTimes->{
+  3.552194256757093*^9, 3.556715735627439*^9, 3.556715961270137*^9, {
+   3.556716062183473*^9, 3.5567160908551283`*^9}, 3.556716127991179*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.556716164686499*^9, 3.5567162115530863`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Flog", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{"a", " ", "**", " ", "b"}], "]"}], " ", "**", " ", 
+     RowBox[{"X", "[", 
+      RowBox[{"c", "**", " ", "d"}], "]"}]}]}], "\[IndentingNewLine]", 
+   RowBox[{"Simp", "[", 
+    RowBox[{"Dosh", "[", "Flog", "]"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Simp", "[", 
+    RowBox[{"Dosh", "[", 
+     RowBox[{"Dosh", "[", "Flog", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+   
+   RowBox[{"Simp", "[", 
+    RowBox[{"Dosh", "[", 
+     RowBox[{"Dosh", "[", 
+      RowBox[{"Dosh", "[", "Flog", "]"}], "]"}], "]"}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Simp", "[", 
+    RowBox[{"Dosh", "[", 
+     RowBox[{"Dosh", "[", 
+      RowBox[{"Dosh", "[", 
+       RowBox[{"Dosh", "[", "Flog", "]"}], "]"}], "]"}], "]"}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Simp", "[", 
+    RowBox[{"Dosh", "[", 
+     RowBox[{"Dosh", "[", 
+      RowBox[{"Dosh", "[", 
+       RowBox[{"Dosh", "[", 
+        RowBox[{"Dosh", "[", "Flog", "]"}], "]"}], "]"}], "]"}], "]"}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.5567157563182383`*^9, 3.556715765875352*^9}, {
+  3.556715803088678*^9, 3.556715804512683*^9}, {3.5567162530224752`*^9, 
+  3.556716292250992*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"X", "[", 
+   RowBox[{"a", "**", "b"}], "]"}], "**", 
+  RowBox[{"X", "[", 
+   RowBox[{"c", "**", "d"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.556715774107028*^9, 3.5567159620084763`*^9, 
+  3.556716294559634*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", "**", 
+     RowBox[{"{", 
+      RowBox[{"c", "**", "d"}], "}"}]}], "}"}], "**", 
+   RowBox[{"{", 
+    RowBox[{"b", "**", 
+     RowBox[{"{", 
+      RowBox[{"c", "**", "d"}], "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.556715774107028*^9, 3.5567159620084763`*^9, 
+  3.556716294564942*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"a", "**", 
+      RowBox[{"{", 
+       RowBox[{"b", "**", 
+        RowBox[{"{", 
+         RowBox[{"c", "**", "d"}], "}"}]}], "}"}]}], "}"}], "**", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"c", "**", "d"}], "}"}], "**", 
+      RowBox[{"{", 
+       RowBox[{"b", "**", 
+        RowBox[{"{", 
+         RowBox[{"c", "**", "d"}], "}"}]}], "}"}]}], "}"}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.556715774107028*^9, 3.5567159620084763`*^9, 
+  3.556716294572653*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", "**", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"c", "**", "d"}], "}"}], "**", 
+         RowBox[{"{", 
+          RowBox[{"b", "**", 
+           RowBox[{"{", 
+            RowBox[{"c", "**", "d"}], "}"}]}], "}"}]}], "}"}]}], "}"}], "**", 
+     
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"b", "**", 
+         RowBox[{"{", 
+          RowBox[{"c", "**", "d"}], "}"}]}], "}"}], "**", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"c", "**", "d"}], "}"}], "**", 
+         RowBox[{"{", 
+          RowBox[{"b", "**", 
+           RowBox[{"{", 
+            RowBox[{"c", "**", "d"}], "}"}]}], "}"}]}], "}"}]}], "}"}]}], 
+    "}"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.556715774107028*^9, 3.5567159620084763`*^9, 
+  3.556716294644896*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"a", "**", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"b", "**", 
+            RowBox[{"{", 
+             RowBox[{"c", "**", "d"}], "}"}]}], "}"}], "**", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"c", "**", "d"}], "}"}], "**", 
+            RowBox[{"{", 
+             RowBox[{"b", "**", 
+              RowBox[{"{", 
+               RowBox[{"c", "**", "d"}], "}"}]}], "}"}]}], "}"}]}], "}"}]}], 
+       "}"}], "**", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"c", "**", "d"}], "}"}], "**", 
+          RowBox[{"{", 
+           RowBox[{"b", "**", 
+            RowBox[{"{", 
+             RowBox[{"c", "**", "d"}], "}"}]}], "}"}]}], "}"}], "**", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"b", "**", 
+            RowBox[{"{", 
+             RowBox[{"c", "**", "d"}], "}"}]}], "}"}], "**", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"c", "**", "d"}], "}"}], "**", 
+            RowBox[{"{", 
+             RowBox[{"b", "**", 
+              RowBox[{"{", 
+               RowBox[{"c", "**", "d"}], "}"}]}], "}"}]}], "}"}]}], "}"}]}], 
+       "}"}]}], "}"}], "}"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.556715774107028*^9, 3.5567159620084763`*^9, 
+  3.556716294650663*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", "**", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"c", "**", "d"}], "}"}], "**", 
+             RowBox[{"{", 
+              RowBox[{"b", "**", 
+               RowBox[{"{", 
+                RowBox[{"c", "**", "d"}], "}"}]}], "}"}]}], "}"}], "**", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"b", "**", 
+               RowBox[{"{", 
+                RowBox[{"c", "**", "d"}], "}"}]}], "}"}], "**", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"c", "**", "d"}], "}"}], "**", 
+               RowBox[{"{", 
+                RowBox[{"b", "**", 
+                 RowBox[{"{", 
+                  RowBox[{"c", "**", "d"}], "}"}]}], "}"}]}], "}"}]}], 
+            "}"}]}], "}"}]}], "}"}], "**", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"b", "**", 
+             RowBox[{"{", 
+              RowBox[{"c", "**", "d"}], "}"}]}], "}"}], "**", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"c", "**", "d"}], "}"}], "**", 
+             RowBox[{"{", 
+              RowBox[{"b", "**", 
+               RowBox[{"{", 
+                RowBox[{"c", "**", "d"}], "}"}]}], "}"}]}], "}"}]}], "}"}], "**", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"c", "**", "d"}], "}"}], "**", 
+             RowBox[{"{", 
+              RowBox[{"b", "**", 
+               RowBox[{"{", 
+                RowBox[{"c", "**", "d"}], "}"}]}], "}"}]}], "}"}], "**", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"b", "**", 
+               RowBox[{"{", 
+                RowBox[{"c", "**", "d"}], "}"}]}], "}"}], "**", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"c", "**", "d"}], "}"}], "**", 
+               RowBox[{"{", 
+                RowBox[{"b", "**", 
+                 RowBox[{"{", 
+                  RowBox[{"c", "**", "d"}], "}"}]}], "}"}]}], "}"}]}], 
+            "}"}]}], "}"}]}], "}"}]}], "}"}], "}"}], "}"}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.556715774107028*^9, 3.5567159620084763`*^9, 
+  3.556716294660149*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Freebie", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{
+       RowBox[{"X", "[", 
+        RowBox[{"a", "**", "b"}], "]"}], "**", "a"}], "]"}], "**", 
+     RowBox[{"X", "[", "c", "]"}]}]}], "\[IndentingNewLine]", 
+   RowBox[{"Simp", "[", "Freebie", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Dosh", "[", "Freebie", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Simp", "[", 
+    RowBox[{"Dosh", "[", "Freebie", "]"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Dosh", "[", 
+    RowBox[{"Dosh", "[", "Freebie", "]"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Simp", "[", 
+    RowBox[{"Dosh", "[", 
+     RowBox[{"Dosh", "[", "Freebie", "]"}], "]"}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Dosh", "[", 
+    RowBox[{"Dosh", "[", 
+     RowBox[{"Dosh", "[", "Freebie", "]"}], "]"}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Simp", "[", 
+    RowBox[{"Dosh", "[", 
+     RowBox[{"Dosh", "[", 
+      RowBox[{"Dosh", "[", "Freebie", "]"}], "]"}], "]"}], "]"}]}]}]], "Input",\
+
+ CellChangeTimes->{{3.557251260117139*^9, 3.5572514522202168`*^9}, {
+  3.5572515050886497`*^9, 3.557251524177623*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"X", "[", 
+   RowBox[{
+    RowBox[{"X", "[", 
+     RowBox[{"a", "**", "b"}], "]"}], "**", "a"}], "]"}], "**", 
+  RowBox[{"X", "[", "c", "]"}]}]], "Output",
+ CellChangeTimes->{3.5572514113603973`*^9, 3.557251454105475*^9, 
+  3.5572515256090727`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"a", "**", "b"}], "}"}], "**", "a"}], "}"}], "**", 
+  RowBox[{"{", "c", "}"}]}]], "Output",
+ CellChangeTimes->{3.5572514113603973`*^9, 3.557251454105475*^9, 
+  3.5572515256144953`*^9}],
+
+Cell[BoxData[
+ RowBox[{"X", "[", 
+  RowBox[{
+   RowBox[{"X", "[", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{"a", "**", "b"}], "]"}], "**", 
+     RowBox[{"X", "[", "c", "]"}]}], "]"}], "**", 
+   RowBox[{"X", "[", 
+    RowBox[{"a", "**", 
+     RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]], "Output",
+ CellChangeTimes->{3.5572514113603973`*^9, 3.557251454105475*^9, 
+  3.5572515256223087`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", "**", "b"}], "}"}], "**", 
+     RowBox[{"{", "c", "}"}]}], "}"}], "**", 
+   RowBox[{"{", 
+    RowBox[{"a", "**", 
+     RowBox[{"{", "c", "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.5572514113603973`*^9, 3.557251454105475*^9, 
+  3.557251525626583*^9}],
+
+Cell[BoxData[
+ RowBox[{"X", "[", 
+  RowBox[{"X", "[", 
+   RowBox[{
+    RowBox[{"X", "[", 
+     RowBox[{
+      RowBox[{"X", "[", 
+       RowBox[{"a", "**", "b"}], "]"}], "**", 
+      RowBox[{"X", "[", 
+       RowBox[{"a", "**", 
+        RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}], "**", 
+    RowBox[{"X", "[", 
+     RowBox[{
+      RowBox[{"X", "[", "c", "]"}], "**", 
+      RowBox[{"X", "[", 
+       RowBox[{"a", "**", 
+        RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}], 
+  "]"}]], "Output",
+ CellChangeTimes->{3.5572514113603973`*^9, 3.557251454105475*^9, 
+  3.557251525631206*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"a", "**", "b"}], "}"}], "**", 
+      RowBox[{"{", 
+       RowBox[{"a", "**", 
+        RowBox[{"{", "c", "}"}]}], "}"}]}], "}"}], "**", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "c", "}"}], "**", 
+      RowBox[{"{", 
+       RowBox[{"a", "**", 
+        RowBox[{"{", "c", "}"}]}], "}"}]}], "}"}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.5572514113603973`*^9, 3.557251454105475*^9, 
+  3.557251525684216*^9}],
+
+Cell[BoxData[
+ RowBox[{"X", "[", 
+  RowBox[{"X", "[", 
+   RowBox[{"X", "[", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{
+       RowBox[{"X", "[", 
+        RowBox[{"a", "**", "b"}], "]"}], "**", 
+       RowBox[{"X", "[", 
+        RowBox[{
+         RowBox[{"X", "[", "c", "]"}], "**", 
+         RowBox[{"X", "[", 
+          RowBox[{"a", "**", 
+           RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}], "**", 
+     RowBox[{"X", "[", 
+      RowBox[{
+       RowBox[{"X", "[", 
+        RowBox[{"a", "**", 
+         RowBox[{"X", "[", "c", "]"}]}], "]"}], "**", 
+       RowBox[{"X", "[", 
+        RowBox[{
+         RowBox[{"X", "[", "c", "]"}], "**", 
+         RowBox[{"X", "[", 
+          RowBox[{"a", "**", 
+           RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}], 
+   "]"}], "]"}]], "Output",
+ CellChangeTimes->{3.5572514113603973`*^9, 3.557251454105475*^9, 
+  3.5572515257418613`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", "**", "b"}], "}"}], "**", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", "c", "}"}], "**", 
+         RowBox[{"{", 
+          RowBox[{"a", "**", 
+           RowBox[{"{", "c", "}"}]}], "}"}]}], "}"}]}], "}"}], "**", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", "**", 
+         RowBox[{"{", "c", "}"}]}], "}"}], "**", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", "c", "}"}], "**", 
+         RowBox[{"{", 
+          RowBox[{"a", "**", 
+           RowBox[{"{", "c", "}"}]}], "}"}]}], "}"}]}], "}"}]}], "}"}], "}"}],
+   "}"}]], "Output",
+ CellChangeTimes->{3.5572514113603973`*^9, 3.557251454105475*^9, 
+  3.5572515258058033`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"TreeForm", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"a", "**", "b"}], ")"}], "**", "a"}], ")"}], "**", "c"}], 
+    "]"}], "\[IndentingNewLine]", 
+   RowBox[{"TreeForm", "[", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{
+       RowBox[{"X", "[", 
+        RowBox[{"a", "**", "b"}], "]"}], "**", "a"}], "]"}], "**", 
+     RowBox[{"X", "[", "c", "]"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"TreeForm", "[", 
+    RowBox[{"X", "[", 
+     RowBox[{"X", "[", 
+      RowBox[{"X", "[", 
+       RowBox[{
+        RowBox[{"X", "[", 
+         RowBox[{
+          RowBox[{"X", "[", 
+           RowBox[{"a", "**", "b"}], "]"}], "**", 
+          RowBox[{"X", "[", 
+           RowBox[{
+            RowBox[{"X", "[", "c", "]"}], "**", 
+            RowBox[{"X", "[", 
+             RowBox[{"a", "**", 
+              RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}], "**", 
+        RowBox[{"X", "[", 
+         RowBox[{
+          RowBox[{"X", "[", 
+           RowBox[{"a", "**", 
+            RowBox[{"X", "[", "c", "]"}]}], "]"}], "**", 
+          RowBox[{"X", "[", 
+           RowBox[{
+            RowBox[{"X", "[", "c", "]"}], "**", 
+            RowBox[{"X", "[", 
+             RowBox[{"a", "**", 
+              RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}]}], 
+       "]"}], "]"}], "]"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.5572526299912443`*^9, 3.557252689601548*^9}, {
+  3.557252743119133*^9, 3.557252789407077*^9}, {3.557252839849577*^9, 
+  3.557252870123755*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[{{1., 0.6666666666666666}, {0., 0.}, {
+    0.6666666666666666, 0.}, {1.3333333333333333`, 0.}, {2., 0.}}, {
+     {RGBColor[0.55, 0.45, 0.45], LineBox[{{1, 2}, {1, 3}, {1, 4}, {1, 5}}]}, {
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["NonCommutativeMultiply", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.03636363636363637],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 1],
+        TagBox[
+         RowBox[{"a", "**", "b", "**", "a", "**", "c"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         NonCommutativeMultiply[$CellContext`a, $CellContext`b, \
+$CellContext`a, $CellContext`c]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["a",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.03636363636363637],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 2],
+        TagBox["a", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`a], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["b",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.03636363636363637],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 3],
+        TagBox["b", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`b], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["a",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.03636363636363637],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 4],
+        TagBox["a", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`a], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["c",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.03636363636363637],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 5],
+        TagBox["c", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`c], "Tooltip"]& ]}}],
+   Annotation[#, 
+    VertexCoordinateRules -> {{1., 0.6666666666666666}, {0., 0.}, {
+     0.6666666666666666, 0.}, {1.3333333333333333`, 0.}, {2., 0.}}]& ],
+  AspectRatio->NCache[Rational[2, 11]^Rational[1, 2], 0.4264014327112209],
+  FrameTicks->Automatic,
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{{3.557252646720044*^9, 3.557252693907441*^9}, 
+   3.557252752455132*^9, 3.55725279147088*^9, 3.5572528776944933`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[{{1.3887301496588271`, 4.629100498862757}, {
+    0.9258200997725514, 3.7032803990902052`}, {0.9258200997725514, 
+    2.777460299317654}, {0.4629100498862757, 1.8516401995451024`}, {
+    0.4629100498862757, 0.925820099772551}, {0., 0.}, {0.9258200997725514, 
+    0.}, {1.3887301496588271`, 1.8516401995451024`}, {1.8516401995451028`, 
+    3.7032803990902052`}, {1.8516401995451028`, 2.777460299317654}}, {
+     {RGBColor[0.55, 0.45, 0.45], 
+      LineBox[{{1, 2}, {1, 9}, {2, 3}, {3, 4}, {3, 8}, {4, 5}, {5, 6}, {5, 
+       7}, {9, 10}}]}, {
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["NonCommutativeMultiply", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.034782608695652174`],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 1],
+        TagBox[
+         RowBox[{
+           RowBox[{"X", "[", 
+             RowBox[{
+               RowBox[{"X", "[", 
+                 RowBox[{"a", "**", "b"}], "]"}], "**", "a"}], "]"}], "**", 
+           RowBox[{"X", "[", "c", "]"}]}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         NonCommutativeMultiply[
+          KnotTheory`X[
+           NonCommutativeMultiply[
+            KnotTheory`X[
+             
+             NonCommutativeMultiply[$CellContext`a, $CellContext`b]], \
+$CellContext`a]], 
+          KnotTheory`X[$CellContext`c]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.034782608695652174`],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 2],
+        TagBox[
+         RowBox[{"X", "[", 
+           RowBox[{
+             RowBox[{"X", "[", 
+               RowBox[{"a", "**", "b"}], "]"}], "**", "a"}], "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[
+          NonCommutativeMultiply[
+           KnotTheory`X[
+            
+            NonCommutativeMultiply[$CellContext`a, $CellContext`b]], \
+$CellContext`a]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["NonCommutativeMultiply", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.034782608695652174`],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 3],
+        TagBox[
+         RowBox[{
+           RowBox[{"X", "[", 
+             RowBox[{"a", "**", "b"}], "]"}], "**", "a"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         NonCommutativeMultiply[
+          KnotTheory`X[
+           
+           NonCommutativeMultiply[$CellContext`a, $CellContext`b]], \
+$CellContext`a]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.034782608695652174`],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 4],
+        TagBox[
+         RowBox[{"X", "[", 
+           RowBox[{"a", "**", "b"}], "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[
+          NonCommutativeMultiply[$CellContext`a, $CellContext`b]]], 
+        "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["NonCommutativeMultiply", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.034782608695652174`],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 5],
+        TagBox[
+         RowBox[{"a", "**", "b"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         NonCommutativeMultiply[$CellContext`a, $CellContext`b]], 
+        "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["a",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.034782608695652174`],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 6],
+        TagBox["a", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`a], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["b",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.034782608695652174`],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 7],
+        TagBox["b", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`b], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["a",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.034782608695652174`],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 8],
+        TagBox["a", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`a], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.034782608695652174`],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 9],
+        TagBox[
+         RowBox[{"X", "[", "c", "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[$CellContext`c]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["c",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.034782608695652174`],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 10],
+        TagBox["c", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`c], "Tooltip"]& ]}}],
+   Annotation[#, 
+    VertexCoordinateRules -> {{1.3887301496588271`, 4.629100498862757}, {
+     0.9258200997725514, 3.7032803990902052`}, {0.9258200997725514, 
+     2.777460299317654}, {0.4629100498862757, 1.8516401995451024`}, {
+     0.4629100498862757, 0.925820099772551}, {0., 0.}, {0.9258200997725514, 
+     0.}, {1.3887301496588271`, 1.8516401995451024`}, {1.8516401995451028`, 
+     3.7032803990902052`}, {1.8516401995451028`, 2.777460299317654}}]& ],
+  AspectRatio->NCache[2 Rational[3, 23]^Rational[1, 2], 0.7223151185146152],
+  FrameTicks->Automatic,
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{{3.557252646720044*^9, 3.557252693907441*^9}, 
+   3.557252752455132*^9, 3.55725279147088*^9, 3.557252878211203*^9}],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[CompressedData["
+1:eJwLyk9STGVgYGACYmUQ7cAe9JR38+KFDkrBWZdfTLoF5yuseHNgyaMZcL7s
+n7tRh1JWwflSyx+aWLOo2X/+++K5jrOMgzhEHM4XhtD2tyDqHAQg5sH5XBCa
+AQocmKHqX0HloXwHBqg7oPrhfKh++1+o6mF8KK0CNweNhstDzYPaqwDzHzof
+7k4haDhB/QvnQ/3rwAsOp9Vw98L4XKj+hrsHpg6ND3ef6Iq0X/mf4+HqYHyY
+OcJo/hNG8x/Mncxo8YRmPty/En+TFb4HP0Hnw/wPALrA+z0=
+    "], {
+     {RGBColor[0.55, 0.45, 0.45], 
+      LineBox[{{1, 2}, {2, 3}, {3, 4}, {4, 5}, {4, 20}, {5, 6}, {6, 7}, {6, 
+       11}, {7, 8}, {8, 9}, {8, 10}, {11, 12}, {12, 13}, {12, 15}, {13, 14}, {
+       15, 16}, {16, 17}, {16, 18}, {18, 19}, {20, 21}, {21, 22}, {21, 27}, {
+       22, 23}, {23, 24}, {23, 25}, {25, 26}, {27, 28}, {28, 29}, {28, 31}, {
+       29, 30}, {31, 32}, {32, 33}, {32, 34}, {34, 35}}]}, {
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 1],
+        TagBox[
+         RowBox[{"X", "[", 
+           RowBox[{"X", "[", 
+             RowBox[{"X", "[", 
+               RowBox[{
+                 RowBox[{"X", "[", 
+                   RowBox[{
+                    RowBox[{"X", "[", 
+                    RowBox[{"a", "**", "b"}], "]"}], "**", 
+                    RowBox[{"X", "[", 
+                    RowBox[{
+                    RowBox[{"X", "[", "c", "]"}], "**", 
+                    RowBox[{"X", "[", 
+                    RowBox[{"a", "**", 
+                    RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}], 
+                 "**", 
+                 RowBox[{"X", "[", 
+                   RowBox[{
+                    RowBox[{"X", "[", 
+                    RowBox[{"a", "**", 
+                    RowBox[{"X", "[", "c", "]"}]}], "]"}], "**", 
+                    RowBox[{"X", "[", 
+                    RowBox[{
+                    RowBox[{"X", "[", "c", "]"}], "**", 
+                    RowBox[{"X", "[", 
+                    RowBox[{"a", "**", 
+                    RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}]}],
+                "]"}], "]"}], "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[
+          KnotTheory`X[
+           KnotTheory`X[
+            NonCommutativeMultiply[
+             KnotTheory`X[
+              NonCommutativeMultiply[
+               KnotTheory`X[
+                NonCommutativeMultiply[$CellContext`a, $CellContext`b]], 
+               KnotTheory`X[
+                NonCommutativeMultiply[
+                 KnotTheory`X[$CellContext`c], 
+                 KnotTheory`X[
+                  NonCommutativeMultiply[$CellContext`a, 
+                   KnotTheory`X[$CellContext`c]]]]]]], 
+             KnotTheory`X[
+              NonCommutativeMultiply[
+               KnotTheory`X[
+                NonCommutativeMultiply[$CellContext`a, 
+                 KnotTheory`X[$CellContext`c]]], 
+               KnotTheory`X[
+                NonCommutativeMultiply[
+                 KnotTheory`X[$CellContext`c], 
+                 KnotTheory`X[
+                  NonCommutativeMultiply[$CellContext`a, 
+                   KnotTheory`X[$CellContext`c]]]]]]]]]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 2],
+        TagBox[
+         RowBox[{"X", "[", 
+           RowBox[{"X", "[", 
+             RowBox[{
+               RowBox[{"X", "[", 
+                 RowBox[{
+                   RowBox[{"X", "[", 
+                    RowBox[{"a", "**", "b"}], "]"}], "**", 
+                   RowBox[{"X", "[", 
+                    RowBox[{
+                    RowBox[{"X", "[", "c", "]"}], "**", 
+                    RowBox[{"X", "[", 
+                    RowBox[{"a", "**", 
+                    RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}], 
+               "**", 
+               RowBox[{"X", "[", 
+                 RowBox[{
+                   RowBox[{"X", "[", 
+                    RowBox[{"a", "**", 
+                    RowBox[{"X", "[", "c", "]"}]}], "]"}], "**", 
+                   RowBox[{"X", "[", 
+                    RowBox[{
+                    RowBox[{"X", "[", "c", "]"}], "**", 
+                    RowBox[{"X", "[", 
+                    RowBox[{"a", "**", 
+                    RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}]}],
+              "]"}], "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[
+          KnotTheory`X[
+           NonCommutativeMultiply[
+            KnotTheory`X[
+             NonCommutativeMultiply[
+              KnotTheory`X[
+               NonCommutativeMultiply[$CellContext`a, $CellContext`b]], 
+              KnotTheory`X[
+               NonCommutativeMultiply[
+                KnotTheory`X[$CellContext`c], 
+                KnotTheory`X[
+                 NonCommutativeMultiply[$CellContext`a, 
+                  KnotTheory`X[$CellContext`c]]]]]]], 
+            KnotTheory`X[
+             NonCommutativeMultiply[
+              KnotTheory`X[
+               NonCommutativeMultiply[$CellContext`a, 
+                KnotTheory`X[$CellContext`c]]], 
+              KnotTheory`X[
+               NonCommutativeMultiply[
+                KnotTheory`X[$CellContext`c], 
+                KnotTheory`X[
+                 NonCommutativeMultiply[$CellContext`a, 
+                  KnotTheory`X[$CellContext`c]]]]]]]]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 3],
+        TagBox[
+         RowBox[{"X", "[", 
+           RowBox[{
+             RowBox[{"X", "[", 
+               RowBox[{
+                 RowBox[{"X", "[", 
+                   RowBox[{"a", "**", "b"}], "]"}], "**", 
+                 RowBox[{"X", "[", 
+                   RowBox[{
+                    RowBox[{"X", "[", "c", "]"}], "**", 
+                    RowBox[{"X", "[", 
+                    RowBox[{"a", "**", 
+                    RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}], 
+             "**", 
+             RowBox[{"X", "[", 
+               RowBox[{
+                 RowBox[{"X", "[", 
+                   RowBox[{"a", "**", 
+                    RowBox[{"X", "[", "c", "]"}]}], "]"}], "**", 
+                 RowBox[{"X", "[", 
+                   RowBox[{
+                    RowBox[{"X", "[", "c", "]"}], "**", 
+                    RowBox[{"X", "[", 
+                    RowBox[{"a", "**", 
+                    RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}]}],
+            "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[
+          NonCommutativeMultiply[
+           KnotTheory`X[
+            NonCommutativeMultiply[
+             KnotTheory`X[
+              NonCommutativeMultiply[$CellContext`a, $CellContext`b]], 
+             KnotTheory`X[
+              NonCommutativeMultiply[
+               KnotTheory`X[$CellContext`c], 
+               KnotTheory`X[
+                NonCommutativeMultiply[$CellContext`a, 
+                 KnotTheory`X[$CellContext`c]]]]]]], 
+           KnotTheory`X[
+            NonCommutativeMultiply[
+             KnotTheory`X[
+              NonCommutativeMultiply[$CellContext`a, 
+               KnotTheory`X[$CellContext`c]]], 
+             KnotTheory`X[
+              NonCommutativeMultiply[
+               KnotTheory`X[$CellContext`c], 
+               KnotTheory`X[
+                NonCommutativeMultiply[$CellContext`a, 
+                 KnotTheory`X[$CellContext`c]]]]]]]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["NonCommutativeMultiply", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 4],
+        TagBox[
+         RowBox[{
+           RowBox[{"X", "[", 
+             RowBox[{
+               RowBox[{"X", "[", 
+                 RowBox[{"a", "**", "b"}], "]"}], "**", 
+               RowBox[{"X", "[", 
+                 RowBox[{
+                   RowBox[{"X", "[", "c", "]"}], "**", 
+                   RowBox[{"X", "[", 
+                    RowBox[{"a", "**", 
+                    RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}], 
+           "**", 
+           RowBox[{"X", "[", 
+             RowBox[{
+               RowBox[{"X", "[", 
+                 RowBox[{"a", "**", 
+                   RowBox[{"X", "[", "c", "]"}]}], "]"}], "**", 
+               RowBox[{"X", "[", 
+                 RowBox[{
+                   RowBox[{"X", "[", "c", "]"}], "**", 
+                   RowBox[{"X", "[", 
+                    RowBox[{"a", "**", 
+                    RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}]}],
+          HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         NonCommutativeMultiply[
+          KnotTheory`X[
+           NonCommutativeMultiply[
+            KnotTheory`X[
+             NonCommutativeMultiply[$CellContext`a, $CellContext`b]], 
+            KnotTheory`X[
+             NonCommutativeMultiply[
+              KnotTheory`X[$CellContext`c], 
+              KnotTheory`X[
+               NonCommutativeMultiply[$CellContext`a, 
+                KnotTheory`X[$CellContext`c]]]]]]], 
+          KnotTheory`X[
+           NonCommutativeMultiply[
+            KnotTheory`X[
+             NonCommutativeMultiply[$CellContext`a, 
+              KnotTheory`X[$CellContext`c]]], 
+            KnotTheory`X[
+             NonCommutativeMultiply[
+              KnotTheory`X[$CellContext`c], 
+              KnotTheory`X[
+               NonCommutativeMultiply[$CellContext`a, 
+                KnotTheory`X[$CellContext`c]]]]]]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 5],
+        TagBox[
+         RowBox[{"X", "[", 
+           RowBox[{
+             RowBox[{"X", "[", 
+               RowBox[{"a", "**", "b"}], "]"}], "**", 
+             RowBox[{"X", "[", 
+               RowBox[{
+                 RowBox[{"X", "[", "c", "]"}], "**", 
+                 RowBox[{"X", "[", 
+                   RowBox[{"a", "**", 
+                    RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}], 
+         HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[
+          NonCommutativeMultiply[
+           KnotTheory`X[
+            NonCommutativeMultiply[$CellContext`a, $CellContext`b]], 
+           KnotTheory`X[
+            NonCommutativeMultiply[
+             KnotTheory`X[$CellContext`c], 
+             KnotTheory`X[
+              NonCommutativeMultiply[$CellContext`a, 
+               KnotTheory`X[$CellContext`c]]]]]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["NonCommutativeMultiply", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 6],
+        TagBox[
+         RowBox[{
+           RowBox[{"X", "[", 
+             RowBox[{"a", "**", "b"}], "]"}], "**", 
+           RowBox[{"X", "[", 
+             RowBox[{
+               RowBox[{"X", "[", "c", "]"}], "**", 
+               RowBox[{"X", "[", 
+                 RowBox[{"a", "**", 
+                   RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], 
+         HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         NonCommutativeMultiply[
+          KnotTheory`X[
+           NonCommutativeMultiply[$CellContext`a, $CellContext`b]], 
+          KnotTheory`X[
+           NonCommutativeMultiply[
+            KnotTheory`X[$CellContext`c], 
+            KnotTheory`X[
+             NonCommutativeMultiply[$CellContext`a, 
+              KnotTheory`X[$CellContext`c]]]]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 7],
+        TagBox[
+         RowBox[{"X", "[", 
+           RowBox[{"a", "**", "b"}], "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[
+          NonCommutativeMultiply[$CellContext`a, $CellContext`b]]], 
+        "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["NonCommutativeMultiply", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 8],
+        TagBox[
+         RowBox[{"a", "**", "b"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         NonCommutativeMultiply[$CellContext`a, $CellContext`b]], 
+        "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["a",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 9],
+        TagBox["a", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`a], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["b",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 10],
+        TagBox["b", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`b], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 11],
+        TagBox[
+         RowBox[{"X", "[", 
+           RowBox[{
+             RowBox[{"X", "[", "c", "]"}], "**", 
+             RowBox[{"X", "[", 
+               RowBox[{"a", "**", 
+                 RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[
+          NonCommutativeMultiply[
+           KnotTheory`X[$CellContext`c], 
+           KnotTheory`X[
+            NonCommutativeMultiply[$CellContext`a, 
+             KnotTheory`X[$CellContext`c]]]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["NonCommutativeMultiply", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 12],
+        TagBox[
+         RowBox[{
+           RowBox[{"X", "[", "c", "]"}], "**", 
+           RowBox[{"X", "[", 
+             RowBox[{"a", "**", 
+               RowBox[{"X", "[", "c", "]"}]}], "]"}]}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         NonCommutativeMultiply[
+          KnotTheory`X[$CellContext`c], 
+          KnotTheory`X[
+           NonCommutativeMultiply[$CellContext`a, 
+            KnotTheory`X[$CellContext`c]]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 13],
+        TagBox[
+         RowBox[{"X", "[", "c", "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[$CellContext`c]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["c",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 14],
+        TagBox["c", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`c], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 15],
+        TagBox[
+         RowBox[{"X", "[", 
+           RowBox[{"a", "**", 
+             RowBox[{"X", "[", "c", "]"}]}], "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[
+          NonCommutativeMultiply[$CellContext`a, 
+           KnotTheory`X[$CellContext`c]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["NonCommutativeMultiply", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 16],
+        TagBox[
+         RowBox[{"a", "**", 
+           RowBox[{"X", "[", "c", "]"}]}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         NonCommutativeMultiply[$CellContext`a, 
+          KnotTheory`X[$CellContext`c]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["a",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 17],
+        TagBox["a", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`a], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 18],
+        TagBox[
+         RowBox[{"X", "[", "c", "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[$CellContext`c]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["c",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 19],
+        TagBox["c", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`c], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 20],
+        TagBox[
+         RowBox[{"X", "[", 
+           RowBox[{
+             RowBox[{"X", "[", 
+               RowBox[{"a", "**", 
+                 RowBox[{"X", "[", "c", "]"}]}], "]"}], "**", 
+             RowBox[{"X", "[", 
+               RowBox[{
+                 RowBox[{"X", "[", "c", "]"}], "**", 
+                 RowBox[{"X", "[", 
+                   RowBox[{"a", "**", 
+                    RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], "]"}], 
+         HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[
+          NonCommutativeMultiply[
+           KnotTheory`X[
+            NonCommutativeMultiply[$CellContext`a, 
+             KnotTheory`X[$CellContext`c]]], 
+           KnotTheory`X[
+            NonCommutativeMultiply[
+             KnotTheory`X[$CellContext`c], 
+             KnotTheory`X[
+              NonCommutativeMultiply[$CellContext`a, 
+               KnotTheory`X[$CellContext`c]]]]]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["NonCommutativeMultiply", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 21],
+        TagBox[
+         RowBox[{
+           RowBox[{"X", "[", 
+             RowBox[{"a", "**", 
+               RowBox[{"X", "[", "c", "]"}]}], "]"}], "**", 
+           RowBox[{"X", "[", 
+             RowBox[{
+               RowBox[{"X", "[", "c", "]"}], "**", 
+               RowBox[{"X", "[", 
+                 RowBox[{"a", "**", 
+                   RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}]}], 
+         HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         NonCommutativeMultiply[
+          KnotTheory`X[
+           NonCommutativeMultiply[$CellContext`a, 
+            KnotTheory`X[$CellContext`c]]], 
+          KnotTheory`X[
+           NonCommutativeMultiply[
+            KnotTheory`X[$CellContext`c], 
+            KnotTheory`X[
+             NonCommutativeMultiply[$CellContext`a, 
+              KnotTheory`X[$CellContext`c]]]]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 22],
+        TagBox[
+         RowBox[{"X", "[", 
+           RowBox[{"a", "**", 
+             RowBox[{"X", "[", "c", "]"}]}], "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[
+          NonCommutativeMultiply[$CellContext`a, 
+           KnotTheory`X[$CellContext`c]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["NonCommutativeMultiply", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 23],
+        TagBox[
+         RowBox[{"a", "**", 
+           RowBox[{"X", "[", "c", "]"}]}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         NonCommutativeMultiply[$CellContext`a, 
+          KnotTheory`X[$CellContext`c]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["a",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 24],
+        TagBox["a", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`a], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 25],
+        TagBox[
+         RowBox[{"X", "[", "c", "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[$CellContext`c]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["c",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 26],
+        TagBox["c", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`c], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 27],
+        TagBox[
+         RowBox[{"X", "[", 
+           RowBox[{
+             RowBox[{"X", "[", "c", "]"}], "**", 
+             RowBox[{"X", "[", 
+               RowBox[{"a", "**", 
+                 RowBox[{"X", "[", "c", "]"}]}], "]"}]}], "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[
+          NonCommutativeMultiply[
+           KnotTheory`X[$CellContext`c], 
+           KnotTheory`X[
+            NonCommutativeMultiply[$CellContext`a, 
+             KnotTheory`X[$CellContext`c]]]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["NonCommutativeMultiply", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 28],
+        TagBox[
+         RowBox[{
+           RowBox[{"X", "[", "c", "]"}], "**", 
+           RowBox[{"X", "[", 
+             RowBox[{"a", "**", 
+               RowBox[{"X", "[", "c", "]"}]}], "]"}]}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         NonCommutativeMultiply[
+          KnotTheory`X[$CellContext`c], 
+          KnotTheory`X[
+           NonCommutativeMultiply[$CellContext`a, 
+            KnotTheory`X[$CellContext`c]]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 29],
+        TagBox[
+         RowBox[{"X", "[", "c", "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[$CellContext`c]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["c",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 30],
+        TagBox["c", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`c], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 31],
+        TagBox[
+         RowBox[{"X", "[", 
+           RowBox[{"a", "**", 
+             RowBox[{"X", "[", "c", "]"}]}], "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[
+          NonCommutativeMultiply[$CellContext`a, 
+           KnotTheory`X[$CellContext`c]]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["NonCommutativeMultiply", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 32],
+        TagBox[
+         RowBox[{"a", "**", 
+           RowBox[{"X", "[", "c", "]"}]}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         NonCommutativeMultiply[$CellContext`a, 
+          KnotTheory`X[$CellContext`c]]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["a",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 33],
+        TagBox["a", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`a], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox["X", "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 34],
+        TagBox[
+         RowBox[{"X", "[", "c", "]"}], HoldForm]],
+       Annotation[#, 
+        HoldForm[
+         KnotTheory`X[$CellContext`c]], "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[InsetBox[
+         FrameBox[
+          StyleBox[
+           TagBox["c",
+            HoldForm], "StandardForm", "Output",
+           StripOnInput->False,
+           FrontFaceColor->GrayLevel[0],
+           BackFaceColor->GrayLevel[0],
+           GraphicsColor->GrayLevel[0],
+           FontSize->Scaled[0.01],
+           FontColor->GrayLevel[0]],
+          Background->RGBColor[1., 1., 0.871],
+          FrameStyle->GrayLevel[0.5],
+          StripOnInput->False], 35],
+        TagBox["c", HoldForm]],
+       Annotation[#, 
+        HoldForm[$CellContext`c], "Tooltip"]& ]}}],
+   Annotation[#, VertexCoordinateRules -> CompressedData["
+1:eJwLyk9STGVgYGACYmUQ7cAe9JR38+KFDkrBWZdfTLoF5yuseHNgyaMZcL7s
+n7tRh1JWwflSyx+aWLOo2X/+++K5jrOMgzhEHM4XhtD2tyDqHAQg5sH5XBCa
+AQocmKHqX0HloXwHBqg7oPrhfKh++1+o6mF8KK0CNweNhstDzYPaqwDzHzof
+7k4haDhB/QvnQ/3rwAsOp9Vw98L4XKj+hrsHpg6ND3ef6Iq0X/mf4+HqYHyY
+OcJo/hNG8x/Mncxo8YRmPty/En+TFb4HP0Hnw/wPALrA+z0=
+     "]]& ],
+  AspectRatio->NCache[Rational[3, 11]^Rational[1, 2], 0.5222329678670935],
+  FrameTicks->Automatic,
+  ImageSize->{955., Automatic},
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{{3.557252646720044*^9, 3.557252693907441*^9}, 
+   3.557252752455132*^9, 3.55725279147088*^9, 3.557252879435664*^9},
+ ImageCache->GraphicsData["CompressedBitmap", "\<\
+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
+/XNn/2n/af/pbjz1vOH/A/mjq1A=\
+\>"]]
+}, Open  ]]
+},
+WindowSize->{1016, 720},
+WindowMargins->{{-4, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Mac OS X PowerPC (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 2170, 58, 178, "Input"],
+Cell[2740, 82, 292, 7, 27, "Output"],
+Cell[3035, 91, 411, 11, 27, "Output"],
+Cell[3449, 104, 609, 18, 27, "Output"],
+Cell[4061, 124, 924, 27, 43, "Output"],
+Cell[4988, 153, 1459, 42, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6484, 200, 1163, 29, 133, "Input"],
+Cell[7650, 231, 350, 8, 27, "Output"],
+Cell[8003, 241, 454, 12, 27, "Output"],
+Cell[8460, 255, 627, 18, 27, "Output"],
+Cell[9090, 275, 916, 28, 27, "Output"],
+Cell[10009, 305, 1397, 42, 43, "Output"],
+Cell[11409, 349, 2228, 65, 58, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13674, 419, 897, 22, 88, "Input"],
+Cell[14574, 443, 352, 9, 27, "Output"],
+Cell[14929, 454, 443, 13, 27, "Output"],
+Cell[15375, 469, 620, 19, 27, "Output"],
+Cell[15998, 490, 907, 29, 27, "Output"]
+}, Open  ]],
+Cell[16920, 522, 94, 1, 27, "Input"],
+Cell[CellGroupData[{
+Cell[17039, 527, 1296, 35, 118, "Input"],
+Cell[18338, 564, 248, 7, 27, "Output"],
+Cell[18589, 573, 373, 12, 27, "Output"],
+Cell[18965, 587, 584, 20, 27, "Output"],
+Cell[19552, 609, 949, 32, 43, "Output"],
+Cell[20504, 643, 1552, 49, 58, "Output"],
+Cell[22059, 694, 2586, 77, 88, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24682, 776, 1187, 30, 148, "Input"],
+Cell[25872, 808, 282, 8, 27, "Output"],
+Cell[26157, 818, 267, 8, 27, "Output"],
+Cell[26427, 828, 403, 12, 27, "Output"],
+Cell[26833, 842, 371, 12, 27, "Output"],
+Cell[27207, 856, 599, 19, 27, "Output"],
+Cell[27809, 877, 546, 18, 27, "Output"],
+Cell[28358, 897, 918, 28, 43, "Output"],
+Cell[29279, 927, 837, 28, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30153, 960, 1603, 46, 118, "Input"],
+Cell[31759, 1008, 3909, 104, 181, "Output"],
+Cell[35671, 1114, 8696, 233, 287, "Output"],
+Cell[44370, 1349, 53397, 1271, 526, 35607, 978, "CachedBoxData", "BoxData", \
+"Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
