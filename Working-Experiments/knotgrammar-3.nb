@@ -1,0 +1,50 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+"\<quandleRule = {{a__,b__},c__} \[Rule] {{a,c},{b,c}}
+Rewrite[t_] := Replace[t ,quandleRule,1]
+Rewrite[{{a,b},c}]
+Rewrite[{{a,c},{b,c}}]\>",
+"Input",CellID->15,CellLabel->"In[109]:= "],Cell[
+BoxData[RowBox[{RowBox[{"{",RowBox[
+{RowBox[{"{",RowBox[{"a__",",","b__"}],"}"}],",","c__"}],"}"}],"\[Rule]",RowBox[{"{",RowBox[
+{RowBox[{"{",RowBox[{"a",",","c"}],"}"}],",",RowBox[{"{",RowBox[{"b",",","c"}],"}"}]}],"}"}]}],
+StandardForm],"Output",CellID->360,CellLabel->"Out[109]= "],Cell[
+BoxData[RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"a",",","b"}],"}"}],",","c"}],"}"}],StandardForm],
+"Output",CellID->362,CellLabel->"Out[111]= "],Cell[
+BoxData[RowBox[{"{",RowBox[{RowBox[
+{"{",RowBox[{"a",",","c"}],"}"}],",",RowBox[{"{",RowBox[{"b",",","c"}],"}"}]}],"}"}],
+StandardForm],"Output",CellID->363,CellLabel->"Out[112]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+"\<Rewrite[{{a,{b,c}},{c,{b,c}}}]\>","Input",CellID->34,CellLabel->"In[113]:= "],Cell[
+BoxData[
+RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"a",",",RowBox[{"{",RowBox[{"b",",","c"}],"}"}]}],"}"}],",",RowBox[
+{"{",RowBox[{"c",",",RowBox[{"{",RowBox[{"b",",","c"}],"}"}]}],"}"}]}],"}"}],StandardForm],
+"Output",CellID->371,CellLabel->"Out[113]= "]},Open]],Cell[
+CellGroupData[{Cell[
+
+"\<Rewrite[{{a,{c,{b,c}}},{{b,c},{c,{b,c}}}}]\>","Input",CellID->47,CellLabel->"In[114]:= "],Cell[
+BoxData[
+RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"a",",",RowBox[{"{",RowBox[{"c",",",RowBox[
+{"{",RowBox[{"b",",","c"}],"}"}]}],"}"}]}],"}"}],",",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[
+{"b",",",RowBox[{"{",RowBox[{"c",",",RowBox[{"{",RowBox[{"b",",","c"}],"}"}]}],"}"}]}],"}"}],",",RowBox[
+{"{",RowBox[{"c",",",RowBox[{"{",RowBox[{"c",",",RowBox[{"{",RowBox[{"b",",","c"}],"}"}]}],"}"}]}],"}"}]}],"}"}]}],"}"}],
+StandardForm],"Output",CellID->384,CellLabel->"Out[114]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+"\<
+Rewrite[{{b,c},{c,{b,c}}}]\>","Input",CellID->134,CellLabel->"In[70]:= "],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"b",",",RowBox[{"{",RowBox[{"c",",",RowBox[
+{"{",RowBox[{"b",",","c"}],"}"}]}],"}"}]}],"}"}],",",RowBox[{"{",RowBox[{"c",",",RowBox[
+{"{",RowBox[{"c",",",RowBox[{"{",RowBox[{"b",",","c"}],"}"}]}],"}"}]}],"}"}]}],"}"}],"}"}],
+StandardForm],"Output",CellID->151,CellLabel->"Out[70]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+"\<Rewrite[{a,{{b,c},d}}]\>","Input",CellID->229,CellLabel->"In[96]:= "],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"a",",",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"b",",","d"}],"}"}],",",RowBox[
+{"{",RowBox[{"c",",","d"}],"}"}]}],"}"}]}],"}"}],StandardForm],"Output",CellID->273,
+CellLabel->"Out[96]= "]},Open]]},StyleDefinitions->"Default.nb",FrontEndVersion->"10.0 for Wolfram Cloud Platform (June 2 2014)",
+WindowSize->{611,668}]

@@ -1,0 +1,22 @@
+#lang racket
+(require redex)
+
+(require redex/tut-subst)
+
+(define-language lambda-magma
+  (e (e (e e ...))
+     (distr e ...)
+     x
+     (x variable-not-otherwise-mentioned)))
+(define-metafunction lambda-magma
+  subst : x v e -> e
+  [(subst x v e)
+   ,(subst/proc x? (list (term x)) (list (term v)) (term e))])
+(define x? (redex-match lambda-magma x))
+(define red
+  (reduction-relation
+   lambda-magma
+   #:domain p
+   (--> (in-hole P (distr (e_1 (e_2 e_3))))
+                 (in-hole P ((e_1 e_2) (e_1 e_3)))
+                 "distr")))

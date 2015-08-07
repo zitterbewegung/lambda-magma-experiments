@@ -1,0 +1,114 @@
+#lang racket
+(require ragg/support)
+(require "lambda-magma-parser.rkt")
+(require (for-syntax syntax/parse))
+
+(define a-parsed-value
+    (parse (list (token 'LEFT-PAREN "(")
+                 (token 'VAR "A")
+                 (token 'LEFT-PAREN "(")
+                 (token 'VAR "B")
+                 (token 'VAR "C")
+                 (token 'RIGHT-PAREN ")")
+                 (token 'RIGHT-PAREN ")"))))
+; tokenize: string -> (sequenceof token-struct?)
+; Generate tokens from a string:
+ (define (tokenize s)
+    (for/list ([str (regexp-match* #px"\\(|\\)|\\w" s)])
+      (match str
+        ["("
+         (token 'LEFT-PAREN str)]
+        [")"
+         (token 'RIGHT-PAREN str)]
+        [else
+         (token 'VAR str)])))
+(define token-source (tokenize "(a(aa))"))
+
+(define v (parse token-source))
+
+;(define (element . x) x)
+;(define (expr . x)  x )
+
+;(define (eliminate-garbage l)
+;  (match l
+;    [(list element a) a]
+;   [(list expr ))]))
+(define (tree-search function list)
+  (cond 
+    [(null? list) '()]
+    [(or (symbol? (car list)) (eq? "(" (car list)) (eq? ")" (car list)) (eq? "a" (car list))) (cons (function list) 
+                          (tree-search function (cdr list)))] ;;ignore garbage and perform test
+    [else (cons
+           (tree-search function (car list))
+           (tree-search function (cdr list)))]))
+(define (tree-map test function list)
+  (cond 
+    [(null? list) '()]
+    [(test (car list)) (cons (function list) ;;ignore garbage and perform test
+                          (tree-map test function (cdr list)))]
+    [else (cons
+           (tree-map test (car list))
+           (tree-map test (cdr list)))]))
+(define (is-not-garbage? list)
+  (not (or (eq? "(" (car list)) (eq? ")" (car list)) (eq? "a" (car list)))))
+
+(define-syntax rotate
+  (syntax-rules ()
+    [(rotate a c ...)
+     (shift-to (c ... a) (a c ...))]))
+ 
+(define-syntax shift-to
+  (syntax-rules ()
+    [(shift-to (from0 from ...) (to0 to ...))
+     (let ([tmp from0])
+       (set! to from) ...
+       (set! to0 tmp))]))
+(define (two-level-n-leaf-tree? l)
+  (if 
+   (and (pair? (car l)) (pair? (cdr l)))
+   (and (<= (length l) 2) (<= (length (cddr l)) 1))
+   #f))
+ (tree-map (lambda (x) #t) two-level-n-leaf-tree? (syntax->datum v))
+#|(define-syntax (distribute stx)
+  (syntax-case stx () 
+    [()]))|#
+(define abc-token-source (tokenize "(ab)c"))
+
+(define abc-syntax-object (parse abc-token-source))
+(two-level-n-leaf-tree? (syntax->datum abc-syntax-object))
+(two-level-n-leaf-tree? '((a b) c))
+ (define abc-syntax-datum (syntax->datum  abc-syntax-object))
+(define (neighbors-count l) 
+  (map (lambda (x) (two-level-n-leaf-tree? x)) l))
+;(tree-map two-level-n-leaf-tree? (lambda (x) (print x)) )
+(define (distribute a b c)
+   (cons (cons a b) (cons a c)))
+(define-syntax (distribute-syntax stx)
+    (syntax-parse stx
+      [(_ (a b ...+) c ...+)
+       #'(cons (cons a b ...) (cons a c ...))]
+      [(_ (expr a ...) ) #'(a...)]))
+(define (lambda-matcher x)
+  (match x
+    (print x)
+    [(cons (cons a b) c)  (cons (cons a b) (cons a c))]
+    [_ '()]
+    [(list-rest 'expr a ... d)  '(expr a d)]
+    [(list-rest 'element a ... d)  '(element a d)]))
+(lambda-matcher (cons (cons 'a 'b) 'c))
+(lambda-matcher (cons (cons 'a 'b) 'c))
+(tree-search lambda-matcher (syntax->datum v))
+(define (lambda-matcher-no-order x)
+  (match x
+    (print x)
+    [(cons (cons a b) c)  (cons (cons a b) (cons a c))]
+    [_ '()]
+    [(list-no-order 'expr (list-no-order 'expr a b) c)  '(expr (expr a b) (expr a c))]
+    [(list-no-order 'element (list-no-order 'element a b) c)   '(element (element a b) (element a c))]))
+(tree-search lambda-matcher-no-order (syntax->datum v))
+(define (distribute-magma A B C)
+  (cond ((or (null? a) (null? b) (null? c)) 
+         '())
+        (else (cons (cons (distribute-magma (caar a) (caar b) (caar c))
+                          (distribute-magma (cdar a) (cdar b) (cdar b                         )))))))
+ 
