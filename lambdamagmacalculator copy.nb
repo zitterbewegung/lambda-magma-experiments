@@ -1,0 +1,317 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     10933,        308]
+NotebookOptionsPosition[     10159,        281]
+NotebookOutlinePosition[     10586,        298]
+CellTagsIndexPosition[     10543,        295]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.552092342562106*^9, 3.552092382744294*^9}, 
+   3.552092494041667*^9, {3.552092552823699*^9, 3.552092572302658*^9}, {
+   3.552092692142006*^9, 3.5520927206263742`*^9}, {3.552092994314549*^9, 
+   3.552093008142765*^9}, {3.552581290760515*^9, 3.552581309509357*^9}, {
+   3.55258143764581*^9, 3.552581609790943*^9}, {3.552582967265958*^9, 
+   3.552582975493627*^9}, {3.554283729925667*^9, 3.5542837647768793`*^9}, {
+   3.5542846879054623`*^9, 3.55428469671826*^9}, {3.5542848256884127`*^9, 
+   3.554284833571843*^9}},
+ FontFamily->"Inconsolata",
+ FontSize->48,
+ FontWeight->"Plain"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"<<", "KnotTheory`"}], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{
+   RowBox[{"rule", " ", "=", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"X", "[", 
+        RowBox[{"a_", "**", " ", "b_"}], "]"}], "**", " ", 
+       RowBox[{"X", "[", "c_", " ", "]"}]}], "\[RuleDelayed]", " ", 
+      RowBox[{"X", "[", 
+       RowBox[{
+        RowBox[{"X", "[", 
+         RowBox[{"a", " ", "**", "c"}], "]"}], "**", 
+        RowBox[{"X", "[", 
+         RowBox[{"b", " ", "**", "c"}], "]"}]}], "]"}]}], "}"}]}], ";"}],
+  FontFamily->"Courier New Bold",
+  FontSize->18,
+  FontWeight->"Plain"], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"XDash", "[", "t_", "]"}], ":=", " ", 
+    RowBox[{"Simplify", "[", 
+     RowBox[{
+      RowBox[{"(", "t", ")"}], "/.", "rule"}], "]"}]}], ";"}],
+  FontFamily->"Courier New Bold",
+  FontSize->18,
+  FontWeight->"Plain"], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.552092342562106*^9, 3.552092382744294*^9}, 
+   3.552092494041667*^9, {3.552092552823699*^9, 3.552092572302658*^9}, {
+   3.552092692142006*^9, 3.5520927206263742`*^9}, {3.552092994314549*^9, 
+   3.552093008142765*^9}, {3.552581290760515*^9, 3.552581309509357*^9}, {
+   3.55258143764581*^9, 3.552581609790943*^9}, {3.552582967265958*^9, 
+   3.552582975493627*^9}, {3.554283729925667*^9, 3.5542837647768793`*^9}, {
+   3.5542846879054623`*^9, 3.55428469671826*^9}, 3.554284834941959*^9},
+ FontFamily->"Inconsolata",
+ FontSize->48,
+ FontWeight->"Plain"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Get", "::", "path"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(ParentDirectory[File]\\)\[NoBreak] in \
+$Path is not a string. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Get/path\\\", ButtonNote -> \
+\\\"Get::path\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.554284840632349*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Get", "::", "noopen"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot open \[NoBreak]\\!\\(\\\"KnotTheory`\\\"\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/noopen\\\", ButtonNote -> \
+\\\"Get::noopen\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.554284840634218*^9}],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.5542848406353607`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Flog", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"X", "[", 
+       RowBox[{"x", " ", "**", " ", "y"}], "]"}], " ", "**", " ", 
+      RowBox[{"X", "[", "z", "]"}]}]}], "\[IndentingNewLine]", 
+    RowBox[{"Dash", "[", "Flog", "]"}], "\[IndentingNewLine]", 
+    RowBox[{"Dash", "[", 
+     RowBox[{"Dash", "[", "Flog", "]"}], "]"}], "\[IndentingNewLine]", 
+    RowBox[{"Dash", "[", 
+     RowBox[{"Dash", "[", 
+      RowBox[{"Dash", "[", "Flog", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+    RowBox[{"Dash", "[", 
+     RowBox[{"Dash", "[", 
+      RowBox[{"Dash", "[", 
+       RowBox[{"Dash", "[", "Flog", "]"}], "]"}], "]"}], "]"}]}]}],
+  FontSize->18]], "Input",
+ CellChangeTimes->{{3.552092313569845*^9, 3.5520923141037188`*^9}, {
+  3.5520923918609247`*^9, 3.552092395315394*^9}, {3.552092512443104*^9, 
+  3.552092539269607*^9}, {3.55209273298065*^9, 3.5520927725149927`*^9}, {
+  3.552092908454919*^9, 3.552092916956485*^9}},
+ FontFamily->"Inconsolata",
+ FontSize->48,
+ FontWeight->"Plain"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"rule2", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"X", "[", 
+          RowBox[{"a_", "**", " ", "b_"}], "]"}], "**", " ", 
+         RowBox[{"X", "[", "c_", " ", "]"}]}], "\[RuleDelayed]", " ", 
+        RowBox[{"X", "[", 
+         RowBox[{
+          RowBox[{"X", "[", 
+           RowBox[{"a", " ", "**", "c"}], "]"}], "**", 
+          RowBox[{"X", "[", 
+           RowBox[{"b", " ", "**", "c"}], "]"}]}], "]"}]}], ",", " ", 
+       RowBox[{
+        RowBox[{"Z", "[", 
+         RowBox[{"X", "[", 
+          RowBox[{"a_", "**", "b_", "**", "c_"}], " ", "]"}], "]"}], 
+        "\[RuleDelayed]", " ", 
+        RowBox[{"X", "[", 
+         RowBox[{
+          RowBox[{"X", "[", 
+           RowBox[{"a", "**", " ", "b", "**", " ", "c"}], "]"}], "**", 
+          RowBox[{"X", "[", 
+           RowBox[{"a", "**", "b", "**", "c"}], "]"}]}], "]"}]}]}], " ", 
+      "}"}]}], " ", ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"DIT", "[", "t_", "]"}], ":=", " ", 
+     RowBox[{"Simplify", "[", 
+      RowBox[{
+       RowBox[{"(", "t", ")"}], "/.", "rule2"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"FLOG2", " ", "=", " ", 
+    RowBox[{"X", "[", 
+     RowBox[{
+      RowBox[{"X", "[", 
+       RowBox[{"x", "**", "y"}], "]"}], " ", "**", " ", 
+      RowBox[{"X", "[", "z", "]"}], " ", "**", " ", 
+      RowBox[{"X", "[", "y", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"FLOG3", " ", "=", " ", 
+    RowBox[{"X", "[", 
+     RowBox[{
+      RowBox[{"X", "[", 
+       RowBox[{"x", "**", "y"}], "]"}], " ", "**", " ", 
+      RowBox[{"X", "[", "z", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"DIT", "[", "Flog", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"DIT", "[", 
+    RowBox[{"DIT", "[", "Flog", "]"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"DIT", "[", 
+    RowBox[{"DIT", "[", 
+     RowBox[{"DIT", "[", "Flog", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"DIT", "[", 
+    RowBox[{"DIT", "[", 
+     RowBox[{"DIT", "[", 
+      RowBox[{"DIT", "[", "Flog", "]"}], "]"}], "]"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.552581585608563*^9, 3.5525816628800793`*^9}, {
+   3.5525816980810823`*^9, 3.552581788639241*^9}, {3.552582453938023*^9, 
+   3.552582507598118*^9}, {3.5525825449916973`*^9, 3.5525825469739313`*^9}, {
+   3.55258274017494*^9, 3.552582761750609*^9}, {3.5525828017788763`*^9, 
+   3.552583108121223*^9}, {3.552583246097172*^9, 3.5525833010862837`*^9}, {
+   3.552583782641135*^9, 3.552583880162284*^9}, {3.55260168550489*^9, 
+   3.552601770809808*^9}, {3.552601934966951*^9, 3.552601937133574*^9}, 
+   3.552602096437512*^9, {3.5542830753531113`*^9, 3.5542830803969603`*^9}, {
+   3.55428352740062*^9, 3.554283532391198*^9}, {3.554283577854107*^9, 
+   3.554283650045403*^9}, {3.554284734685649*^9, 3.5542847802727747`*^9}},
+ FontFamily->"Inconsolata",
+ FontSize->48,
+ FontWeight->"Plain"],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.552583807404665*^9, 3.5525838125703373`*^9}},
+ FontFamily->"Inconsolata",
+ FontSize->48],
+
+Cell[BoxData[
+ RowBox[{"Z", "[", 
+  RowBox[{
+   RowBox[{"X", "[", 
+    RowBox[{"x", "**", "y"}], "]"}], "**", 
+   RowBox[{"X", "[", "z", "]"}]}], "]"}]], "Output",
+ CellChangeTimes->{{3.552583290732931*^9, 3.552583304360752*^9}},
+ FontFamily->"Inconsolata",
+ FontSize->48],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Z", "[", 
+   RowBox[{"X", "[", 
+    RowBox[{"X", "[", 
+     RowBox[{"X", "[", 
+      RowBox[{"X", "[", 
+       RowBox[{
+        RowBox[{"X", "[", 
+         RowBox[{"x", "**", "y", "**", "z", "**", "z", "**", "y", "**", "z"}],
+          "]"}], "**", 
+        RowBox[{"X", "[", 
+         RowBox[{
+         "z", "**", "y", "**", "z", "**", "y", "**", "z", "**", "z", "**", 
+          "y", "**", "z"}], "]"}]}], "]"}], "]"}], "]"}], "]"}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rule2", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"X", "[", 
+        RowBox[{"a_", "**", " ", "b_"}], "]"}], "**", " ", 
+       RowBox[{"X", "[", "c_", " ", "]"}]}], "\[RuleDelayed]", " ", 
+      RowBox[{"X", "[", 
+       RowBox[{
+        RowBox[{"X", "[", 
+         RowBox[{"a", " ", "**", "c"}], "]"}], "**", 
+        RowBox[{"X", "[", 
+         RowBox[{"b", " ", "**", "c"}], "]"}]}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"X", "[", 
+       RowBox[{"X", "[", 
+        RowBox[{"a_", "**", "b_", "**", "c_"}], " ", "]"}], "]"}], 
+      "\[RuleDelayed]", " ", 
+      RowBox[{"X", " ", "[", 
+       RowBox[{
+        RowBox[{"X", "[", 
+         RowBox[{"a", "**", " ", "b", "**", " ", "c"}], "]"}], "**", 
+        RowBox[{"X", "[", 
+         RowBox[{"a", "**", "b", "**", "c"}], "]"}]}], "]"}]}]}], " ", 
+    "}"}]}], " ", ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"DIT", "[", "t_", "]"}], ":=", " ", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{"(", "t", ")"}], "/.", "rule2"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.554283149647458*^9, 3.554283166591172*^9}, {
+  3.554283556415283*^9, 3.554283570385878*^9}},
+ FontFamily->"Inconsolata",
+ FontSize->48,
+ FontWeight->"Plain"],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.5542831261692457`*^9, 3.554283130015614*^9}},
+ FontFamily->"Inconsolata",
+ FontSize->48]
+},
+WindowSize->{1280, 603},
+WindowMargins->{{6, Automatic}, {Automatic, 15}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->FrontEnd`FileName[{"Article"}, "JournalArticle.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 627, 11, 63, "Input"],
+Cell[CellGroupData[{
+Cell[1197, 35, 1521, 39, 246, "Input"],
+Cell[2721, 76, 446, 10, 23, "Message"],
+Cell[3170, 88, 441, 10, 23, "Message"],
+Cell[3614, 100, 78, 1, 27, "Output"]
+}, Open  ]],
+Cell[3707, 104, 1076, 26, 150, "Input"],
+Cell[4786, 132, 3010, 72, 867, "Input"],
+Cell[7799, 206, 127, 3, 56, "Text"],
+Cell[7929, 211, 272, 8, 65, "Output"],
+Cell[8204, 221, 1821, 53, 744, InheritFromParent],
+Cell[10028, 276, 127, 3, 56, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)

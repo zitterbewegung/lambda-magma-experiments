@@ -1,0 +1,56 @@
+#lang racket
+(require ragg/support)
+(require "lambda-magma-parser.rkt")
+(define a-parsed-value
+    (parse (list (token 'LEFT-PAREN "(")
+                 (token 'VAR "A")
+                 (token 'LEFT-PAREN "(")
+                 (token 'VAR "B")
+                 (token 'VAR "C")
+                 (token 'RIGHT-PAREN ")")
+                 (token 'RIGHT-PAREN ")"))))
+; tokenize: string -> (sequenceof token-struct?)
+; Generate tokens from a string:
+ (define (tokenize s)
+    (for/list ([str (regexp-match* #px"\\(|\\)|\\w" s)])
+      (match str
+        ["("
+         (token 'LEFT-PAREN str)]
+        [")"
+         (token 'RIGHT-PAREN str)]
+        [else
+         (token 'VAR str)])))
+(define token-source (tokenize "(a(defghi))(b(defghi))"))
+
+(define v (parse token-source))
+(define (eliminate-garbage l)
+  (match l
+    [(list element a) a]))
+(define (depth-first-search test function list)
+  (cond 
+    [(null? list) '()]
+    [(test (first list)) (cons (function list) (depth-first-search function (cdr list)))]
+    [else (cons
+           (depth-first-search function (car list))
+           (depth-first-search function (cdr list)))]))
+;(define test-eq-a (lambda (x) (equal? 'a x)))
+;(eliminate-garbage '(element "a"))
+(define-syntax rotate
+  (syntax-rules ()
+    [(rotate a c ...)
+     (shift-to (c ... a) (a c ...))]))
+ 
+(define-syntax shift-to
+  (syntax-rules ()
+    [(shift-to (from0 from ...) (to0 to ...))
+     (let ([tmp from0])
+       (set! to from) ...
+       (set! to0 tmp))]))
+(define (three-leaf-tree? l)
+  (and (> (length l) 2) (> (length (cdr l) 2))))
+#|(define-syntax (distribute stx)
+  (syntax-case stx () 
+    [()]))|#
+(define token-source2 (tokenize "(ab)c"))
+
+(define v2 (parse token-source2))

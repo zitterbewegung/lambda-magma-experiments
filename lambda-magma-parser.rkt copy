@@ -1,0 +1,3 @@
+#lang ragg
+expr: element [element]* 
+element: LEFT-PAREN  element* RIGHT-PAREN | VAR  

@@ -1,0 +1,13 @@
+#lang racket
+(require (planet dvanhorn/grammar:1:3/grammar))
+ (define-grammar lambda-magma?
+    (grammar <expression>
+      (<expression>  (alt <variable> <application> <abstraction>))
+      (<application> (lst <expression> <expression>))
+      (<abstraction> (lst 'lambda (lst <variable>) <expression>))
+      (<variable>    (predicate 
+                      (λ (x) (and (symbol? x) (not (eq? x 'lambda))))))
+      (<magma>  (lst <expression> <selfdistr> <expression>))
+      (<selfdistr> <variable> <variable>))))
+  
+ 
